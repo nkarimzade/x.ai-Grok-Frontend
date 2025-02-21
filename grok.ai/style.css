@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Poppins", serif;
+    background-color: black;
+}
+
+.navbar {
+    width: 100%;
+    background-color: black;
+    color: darkgray;
+    height: 5vh;
+    display: flex;
+    justify-content: left;
+}
+
+
+.navbar .logo {
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    margin-left: 100px;
+
+}
+
+.logo h1:hover {
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    transform: translateY(-1px);
+}
+
+
+.navbar ul li {
+    margin: 20px 10px;
+    list-style: none;
+    display: inline-block;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.hamburger-menu {
+    display: none;
+}
+
+.hamburger-menu.show {
+    display: block;
+}
+
+
+
+
+.navbar ul li {
+    list-style: none;
+    position: relative;
+}
+
+.navbar ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: darkgray;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar ul li:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar ul li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.home {
+    width: 100%;
+    height: 70vh;
+    color: #fff;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 200px;
+}
+
+.home h1 {
+    font-size: 450px;
+}
+
+.hamburger-btn {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .home h1 {
+        font-size: 100px;
+    }
+
+    .navbar ul li {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .navbar .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+
+    .hamburger-btn {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .navbar .logo {
+        width: 100px;
+        height: 100px;
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+
+
+    .hamburger-menu {
+        display: none;
+        margin: 15px 0;
+        flex-direction: column;
+        background: #000000;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+
+    }
+
+
+
+    .hamburger-menu:hover {
+        text-decoration: underline;
+        transition: 0.3s;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .fot ul li{
+        font-size: 12px;
+    }
+
+   
+
+}
+
+h1 span {
+    background-image: linear-gradient(to left, black, white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    cursor: default;
+    filter: grayscale(30%);
+    transition: color 1s ease;
+    opacity: 0.2;
+}
+
+h1 span:hover {
+    opacity: 1;
+    cursor: default;
+    filter: grayscale(0%);
+    background-image: linear-gradient(to left, rgb(255, 111, 111), rgb(144, 144, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: 1s ease;
+}
+
+
+.haraket {
+    width: 20px;
+    height: 20px;
+    margin-left: 100px;
+    animation: moveAnimation 2s infinite;
+}
+
+@keyframes moveAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(30px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    75% {
+        transform: translateY(40px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.text-one {
+    font-size: 26px;
+    font-weight: 200;
+    margin: 20px 0;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-two {
+    font-size: 25px;
+    color: darkgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.text-two p {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    padding-bottom: 5px;
+}
+
+.text-two p:hover {
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+    transform: translateY(-5px);
+}
+
+.blog {
+    color: #fff;
+    display: flex;
+    margin: 100px 150px;
+    justify-content: space-around;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: white;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.hr-two {
+    border: none;
+    height: 1px;
+    background-color: white;
+    width: 100%;
+    margin: 20px 15px;
+}
+
+.p-one {
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.p-two {
+    color: darkgray;
+    font-size: 25px;
+    font-weight: 100;
+    border-bottom: 2px solid darkgray;
+    cursor: pointer;
+}
+
+.p-two:hover {
+    transform: translateY(-5px);
+    color: #fff;
+    transition: 0.6s;
+}
+
+
+
+.careers {
+    width: 100%;
+    height: 50vh;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+.future p {
+    font-size: 20px;
+    font-weight: 100;
+    transform: translateY(-70px);
+
+}
+
+.engineer h2{
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.san h2{
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.san i{
+    margin: 0 20px;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+.san i:hover{
+    background-color: darkgray;
+    color: white;
+    cursor: pointer;
+    transform: translateX(10px);
+}
+
+.fot{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.fot ul li{
+    display: inline;
+    list-style: none;
+    margin: 0 20px;
+    font-weight: 300;
+    color: darkgray;
+    transition: 1s;
+}
+
+.fot ul li:hover{
+    color: white;
+    cursor: pointer;
+}
